@@ -1,0 +1,48 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Welcome to the README file for our R implementation of the Mechanistic Model for Predicting CPDI\
+The source code for this project can be found at the following address:\
+\
+https://github.com/stevescherrer/CPDI-Submission-Repository/blob/master/Code/Mechanistic%20CPDI%20Model.R\
+\
+As noted in the scripts comment section, there are two main functions for users such as yourself.\
+\
+1. predict_cpdi_interference()\
+2. rank_receiver_depths()\
+\
+We have also included the function test() with example values to test that the script is working properly. \
+\
+1. predict_cpdi_interference\
+This function takes a number of arguments and produces a matrix with rows corresponding to transmitter depth and columns corresponding to transmitter distance from the receiver. If the argument plot = TRUE, \
+\
+The function takes the following arguments:\
+\'97 bottom_depth - numeric value. Depth in meters of the study site. In this implementation, it is assumed the study site has a uniform bottom depth. \
+\'97 average_max_detection_radius - numeric value. Maximum distance in meters from a receiver that a tag can be detected. \
+\'97 receiver_depth - numeric value. Depth of receiver  in meters relative to the surface. (ie: If receiver is on rope 3 m above seafloor, receiver depth = bottom depth - 3)\
+\'97  speed_of_sound - numeric value. Speed of sound in enviornment. Assummed to be 1530 m/sec unless specified otherwise\
+\'97  max_horizontal_dist - numeric value. Maximum distance model should simulate\
+\'97 evaluation_interval - numeric value.  To reduce computational speed, model can bin search area. By default, model makes a prediction for every 1 meter.  \
+\'97 blanking_interval - numeric value. The receiver's blanking interval in seconds (default is 0.260)\
+\'97 plot - TRUE or FALSE. Whether or not to produce a plot showing where detections are predicted to occur. Light grey indicates positions where a tag can be heard while dark grey are positions where tag is not heard\
+save_file - TRUE or FALSE. If plot argument is true and save_file argument is true, plot will be saved to working directory.\
+\'97 ...  - Additonal plot options found in plot heat map function. Notably, save_file = TRUE will save a plot to the working directory\
+ \
+2. rank_receiver_depths()\
+This function takes a number of arguments and generates a list of the optimum heights for placing a receiver based on the number of total  positions that a tag can be detected\
+Inputs:\
+ \'97 bottom_depth - numeric value. Depth in meters of study site. \
+ \'97 max_horizontal_dist - numeric value . Maximum distance from the receiver model should simulate\
+ \'97 ave_max_detection_radius - numeric value. Maximum distance in meters from a receiver that a tag can be detected. \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \'97 evaluation_interval - numeric value.  To reduce computational speed, model can bin search area. By default, model makes a prediction for every 1 meter.  \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0  \'97  speed_of_sound - numeric value. Speed of sound in enviornment. Assummed to be 1530 m/sec unless specified otherwise\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \'97 blanking_interval - numeric value. The receiver's blanking interval in seconds (default is 0.260)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \'97 tag_depth_range - An optional vector of depths a tag may appear of the format min_depth:max_depth or c(min_depth, max_depth). If a fish is known to be present at depths of 120-300 m, it makes no sense to evaluate positions shallower than 120 m.  }

@@ -1,0 +1,13 @@
+Receiver Height (m),Tidal Phase,Diurnal Period,GAM Estimated AMDR (m),GAM Estimated CPDI (m),Model Predicted CPDI (m)
+1,in,day,290 (289-290),0 (0-0),0
+1,out,day,290 (289-290),0 (0-0),0
+1,in,night,285 (284-285),0 (0-0),0
+1,out,night,285 (284-285),0 (0-0),0
+7.5,in,day,283 (282-283),0 (0-0),0
+7.5,out,day,283 (282-283),0 (0-0),0
+7.5,in,night,278 (277-278),0 (0-0),0
+7.5,out,night,278 (277-278),0 (0-0),0
+15,in,day,284 (283-284),0 (0-0),0
+15,out,day,284 (283-284),0 (0-0),0
+15,in,night,278 (278-279),0 (0-0),0
+15,out,night,278 (278-279),0 (0-0),0
