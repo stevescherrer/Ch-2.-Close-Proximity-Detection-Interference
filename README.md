@@ -67,14 +67,24 @@ This function takes a number of arguments and produces a matrix with rows corres
 
 The function takes the following arguments:
   — bottom_depth - numeric value. Depth in meters of the study site. In this implementation, it is assumed the study site has a uniform bottom depth. 
+  
   — average_max_detection_radius - numeric value. Maximum distance in meters from a receiver that a tag can be detected. 
+  
   — receiver_depth - numeric value. Depth of receiver  in meters relative to the surface. (ie: If receiver is on rope 3 m above seafloor, receiver depth = bottom depth - 3)
+  
   —  speed_of_sound - numeric value. Speed of sound in enviornment. Assummed to be 1530 m/sec unless specified otherwise
+  
   —  max_horizontal_dist - numeric value. Maximum distance model should simulate
+  
   — evaluation_interval - numeric value.  To reduce computational speed, model can bin search area. By default, model makes a prediction for every 1 meter.  
+  
   — blanking_interval - numeric value. The receiver's blanking interval in seconds (default is 0.260)
-  — plot - TRUE or FALSE. Whether or not to produce a plot showing where detections are predicted to occur. Light grey indicates positions where a tag can be heard while dark grey are positions where tag is not heard
+  
+  — plot - TRUE or FALSE. Whether or not to produce a plot showing where detections are predicted to occur. Light grey 
+  indicates positions where a tag can be heard while dark grey are positions where tag is not heard
+  
   save_file - TRUE or FALSE. If plot argument is true and save_file argument is true, plot will be saved to working directory.
+  
   — ...  - Additonal plot options found in plot heat map function. Notably, save_file = TRUE will save a plot to the working directory
  
 2. rank_receiver_depths()
