@@ -29,7 +29,7 @@ Recreating Manuscript Analysis:
 Prerequisites
 Prior to running code in this repository, you will need to download and install the following software:
 	- R (https://www.r-project.org)
-  - RStudio (http://rstudio.com)
+  	- RStudio (http://rstudio.com)
 
 Once R is installed and running, the following packages that must be installed using the install.packages('package_name') function (note: replace package_name with the name of the package you're trying to install)
 This can be accomplished in one of 2 ways. 
